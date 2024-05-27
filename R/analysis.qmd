@@ -1,0 +1,47 @@
+---
+title: "Penguin Analysis"
+format: html
+editor: visual
+---
+
+# Introduction
+
+# Data loading
+
+Where the dataset comes from ? This is the link of the [palmer penguins](https://allisonhorst.github.io/palmerpenguins/)
+
+# Descriptive analytics
+
+```{r}
+library(readxl)
+library(tidyverse)
+data <- read_excel("../input/data.xlsx", na="NA")
+
+summary(data)
+
+print(round(mean(subset(na.omit(data), species == "Adelie" & island == "Torgersen")$bill_length_mm), 2))
+print(round(mean(subset(na.omit(data), species == "Adelie" & island == "Biscoe")$bill_length_mm), 2))
+print(round(mean(subset(na.omit(data), species == "Adelie" & island == "Dream")$bill_length_mm), 2))
+
+
+# Plot
+
+data %>%
+ggplot(aes(bill_length_mm, bill_depth_mm, colour = species, shape=species)) + 
+  geom_point()
+```
+
+I **love** the `boxplot()` function of R, *so much*!
+
+## A bit less important
+
+![pingouins](https://images.app.goo.gl/2zJBsLmJ2BeycPEV7)
+
+# List
+
+-   Item 1
+-   Item 2
+-   Sub-item 1
+
+1.  First item
+2.  Second item
