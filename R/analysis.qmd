@@ -6,6 +6,8 @@ editor: visual
 
 # Introduction
 
+Penguins 
+
 # Data loading
 
 Where the dataset comes from ? This is the link of the [palmer penguins](https://allisonhorst.github.io/palmerpenguins/)
